@@ -1,23 +1,61 @@
-import logo from './logo.svg';
+import React , {useRef, useState, useEffect} from 'react';
 import './App.css';
-
+import Home from './Components/Home';
+import { HomePage2 } from './Components/HomePage2';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
+import PhoneNumber from './Components/PhoneNumber';
+import Head from './Components/Head';
+const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 760,
+      lg: 1200,
+      xl: 1920,
+    },
+  },
+});
 function App() {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.up('sm'));
+  const [isVisible, setIsVisible] = useState(false);
+  const elementRef = useRef(null);
+ useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.5 } // Adjust threshold as needed
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => {
+      if (elementRef.current) {
+        observer.unobserve(elementRef.current);
+      }
+    };
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ThemeProvider theme={theme}>
+        <header className="App-header">
+        <Head/>
+        </header>
+        <div className='page' ref={elementRef}>
+          <Home />
+        </div>
+
+        <div className='page'>
+          <HomePage2 />
+        </div>
+           </ThemeProvider>
+       {<PhoneNumber isVisible={!isVisible}/>}
     </div>
   );
 }
