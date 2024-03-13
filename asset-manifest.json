@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Unicard/static/css/main.29fc82d9.css",
+    "main.js": "/Unicard/static/js/main.cb225388.js",
+    "static/js/453.5c7d18cb.chunk.js": "/Unicard/static/js/453.5c7d18cb.chunk.js",
+    "index.html": "/Unicard/index.html",
+    "main.29fc82d9.css.map": "/Unicard/static/css/main.29fc82d9.css.map",
+    "main.cb225388.js.map": "/Unicard/static/js/main.cb225388.js.map",
+    "453.5c7d18cb.chunk.js.map": "/Unicard/static/js/453.5c7d18cb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.29fc82d9.css",
+    "static/js/main.cb225388.js"
+  ]
+}
