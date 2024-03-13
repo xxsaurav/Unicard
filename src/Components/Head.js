@@ -4,7 +4,7 @@ import React from 'react'
 const Head = () => {
     return (
         <Box
-            sx={{ background: 'transparent', width: '100%', minHeight: '80px', zIndex: '40px',
+            sx={{ background: 'transparent',  minHeight: '80px', zIndex: '40px',
         padding:'0 45px'
         }}
         >

@@ -30,7 +30,7 @@ export const HomePage2 = () => {
                 </Box>
                 <Box className="flex-container">
                     <Box className="down-arrow">
-                        <img alt="down_arrow" src='/assets/down_arrow.svg'/>
+                        <img alt="down_arrow" src='assets/down_arrow.svg'/>
                     </Box>
                 </Box>
             </Box>
