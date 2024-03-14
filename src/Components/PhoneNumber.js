@@ -23,6 +23,9 @@ const PhoneNumber = ({ isVisible, home }) => {
         if (!isSmallScreen) {
             setIsVisibleTextInMobile(prev => !prev)
         }
+        if(text.length===10){
+            window.alert("Feature not implemented")
+        }
     }
 
     return (
