@@ -10,7 +10,6 @@ const Home = () => {
     const theme = useTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.up('sm'));
     const isMediumScreen = useMediaQuery(theme.breakpoints.up('md'));
-    console.log('isVisible',isSmallScreen)
    
    return (
 
@@ -28,7 +27,7 @@ const Home = () => {
                     justifyContent="center"
                     alignItems="center"
                 >
-                    <Grid item xs={12} sm={6} md={6}  >
+                    <Grid  item xs={12} sm={6} md={6}  >
                         <Typography align="left" variant="h2"
                          sx={{
                             fontSize: { xs: '2rem', sm: '3rem' },

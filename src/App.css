@@ -1,12 +1,16 @@
 .App{
   display: flex;
   flex-direction: column;
-  height: 200vh;
+  height: 400vh;
 }
 .App-header{
   z-index: 15;
 }
 .page {
   height: 100vh; 
+  
+}
+.page-2 {
+  height: 200vh; 
   
 }

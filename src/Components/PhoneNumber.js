@@ -20,13 +20,10 @@ const PhoneNumber = ({ isVisible, home }) => {
     const isMediumScreen = useMediaQuery(theme.breakpoints.up('md'));
     const [isVisibleTextInMobile, setIsVisibleTextInMobile] = useState(false);
     const handleApplyNow = (e) => {
-        console.log("click")
         if (!isSmallScreen) {
-            console.log("apply")
             setIsVisibleTextInMobile(prev => !prev)
         }
     }
-    console.log(isVisible, isSmallScreen, home, error)
 
     return (
         <>
@@ -123,9 +120,9 @@ const PhoneNumber = ({ isVisible, home }) => {
                         mr: "auto", ml: 'auto'
                     }}>
                         <Box
-                        sx={{
-                            ml:'.75rem'
-                        }}
+                            sx={{
+                                ml: '.75rem'
+                            }}
                         >
 
 
@@ -158,17 +155,17 @@ const PhoneNumber = ({ isVisible, home }) => {
                                     InputProps={{
                                         disableUnderline: true,
                                         endAdornment:
-                                        <>
-                                            {text && !error && (
-                                                <IconButton onClick={handleClear} edge="start">
-                                                    <ClearIcon sx={{ color: '#ffffff' }} />
-                                                </IconButton>
-                                            )}
-                                            {error && <PriorityHighIcon sx={{ color: 'red' }} />}
-                                         </>   
+                                            <>
+                                                {text && !error && (
+                                                    <IconButton onClick={handleClear} edge="start">
+                                                        <ClearIcon sx={{ color: '#ffffff' }} />
+                                                    </IconButton>
+                                                )}
+                                                {error && <PriorityHighIcon sx={{ color: 'red' }} />}
+                                            </>
                                     }}
                                     fullWidth
-                                    
+
                                 />}
 
                         </Box>

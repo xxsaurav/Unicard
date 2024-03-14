@@ -7,6 +7,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import PhoneNumber from './Components/PhoneNumber';
 import Head from './Components/Head';
+import { HomePage3 } from './Components/HomePage3';
 const theme = createTheme({
   breakpoints: {
     values: {
@@ -53,6 +54,10 @@ function App() {
 
         <div className='page'>
           <HomePage2 />
+        </div>
+        <div className='page-2'>
+         <HomePage3/>
+         
         </div>
            </ThemeProvider>
        {<PhoneNumber isVisible={!isVisible}/>}

@@ -1,0 +1,25 @@
+.page3 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200%;
+   max-width: 80rem;
+}
+.section-2 {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  
+}
+.size-28{
+  line-height: 1;
+  font-size: 28px;
+}
+
+.size-14{
+  line-height: 1;
+  font-size: 14px;
+}
+
